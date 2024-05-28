@@ -1,8 +1,5 @@
-from dotenv import load_dotenv
-import os
+from Admin.connection.Mail.conect_mail import connec_buzon
 
-load_dotenv()
-user=os.getenv('user')
 
-print (user)
+connec_buzon()
 
