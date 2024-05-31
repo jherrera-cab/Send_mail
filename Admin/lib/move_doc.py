@@ -38,9 +38,20 @@ def move_doc():
         df_list_doc=pd.DataFrame(list_doc_pendig, columns=['name'])
         df_list_doc['Cta'] = df_list_doc['name'].apply(extract_cta)     #Se utiliza una funcion para con expresiones regulares extraer la cuenta contrato del nombre que esta entre "-"
         df_remove_doc = df_list_doc[(df_list_doc['Cta'].str.len()<=4) | (pd.isna(df_list_doc['Cta']))]
-    print(len(df_remove_doc))
-    print(df_remove_doc)
-    #print(df_list_doc)
+        
+  
+
+    if len(df_remove_doc)>0:
+        for index, row in df_remove_doc.iterrows():
+            file_name=row['name']
+            os.remove(file_name)
+        print(f'Se elimino de la carpeta {len(df_remove_doc)} archivos por error en el nombre.')
+    else:
+        print('No se hace limpieza de la carpeta por el nombre del documento.')
     
+    df_merg_file = pd.merge(df_list_doc,df_remove_doc, on='Cta', how='inner')
+    indices_a_eliminar = df_merg_file.index.tolist()
+    df_clean = df_list_doc.drop(indices_a_eliminar)    
+
 
 move_doc()

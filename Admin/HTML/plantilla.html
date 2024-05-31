@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .body_mail{width: 90%;}
+        tr td{
+            width: 15em;
+        }
+        .encabezado{
+            width: 8em;
+        }
+    </style>
+    
+</head>
+
+
+
+<body>
+    <div class="body_mail">
+        <h3>Madrid, {{fecha}}</h3>
+        <br>
+        <br>
+        <h3>
+            D./Dña <br>
+            {{nombre}} <br>
+            {{cta}} <br>
+            {{direccion}} <br>
+        </h3>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p>
+            Estimado Señor(a), <br><br>
+            Nos dirigimos a usted para notificarle e informarle que <strong>{{ Sociedad }}</strong> ha trasladado el cobro de su deuda a <strong>SYNERJOY S.L</strong>, Por lo tanto, requerimos comunicarnos con usted posterior a la recepción de esta notificación, evitando de esta forma acciones de cobro en instancias superiores. 
+            <br>
+            <br>
+            <strong>Lo invitamos a realizar el pago de su deuda</strong>, póngase en contacto con nosotros para llegar a un acuerdo de pago llamando al teléfono 621 691 679, o respondiendo al correo electrónico <a href="mailto:deudores@synerjoy.com">deudores@synerjoy.com</a>  donde uno de nuestros agentes podrá ofrecerle una atención personalizada. Es nuestro deber informarle de que, en caso de no recepción del pago o respuesta por su parte, se pueden generar otras acciones de cobro en instancias superiores. 
+            <br>
+            <br>
+            En espera de sus noticias. 
+            <br>
+            <br>
+            <strong>Reiteramos nuestro deseo de acordar el pago, para dar de baja el importe pendiente. </strong>
+            <br>
+            <br>
+            Podrá cancelar su deuda con <strong>{{Sociedad}}</strong> realizando transferencia electronica a la cuenta directamente, encuentre ha continuación la información requerida para realizar el pago.
+            <table>
+                <tr>
+                    <td class="encabezado">Entidad bancaria: </td>
+                    <td>CaixaBank</td>
+                </tr>
+                <tr>
+                    <td class="encabezado">Cuenta bancaria: </td>
+                    <td>2100-0900-91-0211395503</td>
+                </tr>
+                <tr>
+                    <td class="encabezado">Codigo SWIFT:</td>
+                    <td>CAIXESBBXXX</td>
+                </tr>
+                <tr>
+                    <td class="encabezado">codigo IBAN: </td>
+                    <td>ES43-2100-0900-9102-1139-5503</td>
+                </tr>
+                <tr>
+                    <td class="encabezado">Concepto: </td>
+                    <td>51441683</td>
+                </tr>
+                <tr>
+                    <td class="encabezado">Importe: </td>
+                    <td>247,33 €</td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            Recuerde utilizar el codigo de <strong>referencia</strong> para realizar la correcta contabilización del ingreso. 
+            <br> 
+            <br>
+            Una vez haya hecho el pago por favor conteste el presente correo con el <strong>justificante</strong> soporte de su pago.
+            <br>
+            <br>
+            <strong>El importe debe ingresarse en cualquier oficina de Banco Santander, BBVA, Bankia, Banco Sabadell, "Servicaixa" de LA CAIXA (24h) y oficinas informatizadas de Correos en horario de atención al cliente. </strong>
+            <br>
+            <br>
+            Le saluda cordialmente,
+            <br><br><br>
+            <strong><h2>Unidad de Cobro</h2> </strong>
+            <strong><h1>SYNERJOY S.L</h1> </strong>
+
+
+        </p>
+        
+    </div>
+</body>
+</html>
