@@ -87,4 +87,4 @@ def view_folder_mail(folder, indent=0):
         view_folder_mail(subfolder, indent + 2)
 
 view_folder_mail(mailbox)
-extract_data_folder("Bandeja de entrada/RECLAMACIONES/RENTA_VENTA", 'RENTA_VENTA')
+extract_data_folder("Bandeja de entrada", 'entrada')
